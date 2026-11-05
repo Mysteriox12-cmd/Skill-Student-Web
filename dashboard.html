@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <script src="sc.js" defer></script>
+    <script src="profil.js" defer></script>
+    <link rel="stylesheet" href="paint.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+<body>
+    <h1>Tableau d’accueil</h1>
+    <main>
+        <section id="Store-user-info">
+            <h2>
+                Bienvenue, <span id="nom-utilisateur">utilisateur</span> !
+            </h2> 
+
+            <p>
+                Établissement :
+                <span id="ecole-utilisateur">Non renseigné</span>
+            </p>
+            <p>
+                Voici le code du jeu:1Ab4T7K90C
+            </p>
+        </section>
+        <div class="barre-boutons">
+
+            <p id="Link">
+                <a href="cahire de charge.html">Cahier de charge</a>
+            </p>
+
+            <p id="Gm">
+                <a href="https://microstudio.io/Rylotox/studentskill/U6ADYHB2/">
+                    Jeu
+                </a>
+            </p>
+
+            <div class="choix-theme">
+                <button
+                    type="button"
+                    id="bouton-theme"
+                    aria-expanded="false"
+                    aria-controls="options-theme"
+                >
+                    Thème
+                </button>
+
+                <div id="options-theme" hidden>
+                    <button type="button" data-theme="clair">
+                        Lumière
+                    </button>
+
+                    <button type="button" data-theme="sombre">
+                        Obscurité
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    
+</body>
+
+</html>

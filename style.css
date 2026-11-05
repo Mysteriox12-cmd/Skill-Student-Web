@@ -1,0 +1,267 @@
+@import url("header.css");
+@import url("footer.css");
+
+/* Fond de la page. */
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    background-image: url("image/Fond éducatif lumineux aux accents bleus.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+body header h1 {
+    font-size: 50px;
+}
+
+/* Organisation en deux colonnes. */
+main {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 480px;
+    column-gap: 40px;
+    row-gap: 20px;
+    align-items: start;
+    padding: 24px;
+}
+
+main > * {
+    min-width: 0;
+}
+
+/* Introduction en haut, sur toute la largeur. */
+main > section:first-child {
+    grid-column: 1 / -1;
+    grid-row: 1;
+}
+
+/* Message d’accueil à gauche. */
+#messages {
+    grid-column: 1;
+    grid-row: 2 / span 3;
+
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 520px;
+    margin: 0;
+    padding: 24px;
+
+    text-align: left;
+    line-height: 1.7;
+    color: #183e32;
+}
+
+#messages h2 {
+    margin-top: 0;
+    font-size: 28px;
+}
+
+/* Formulaire à droite. */
+#inscription {
+    grid-column: 2;
+    grid-row: 2;
+
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding: 28px;
+
+    background-color: white;
+    border: 1px solid #dddddd;
+    border-radius: 18px;
+}
+
+#inscription h2 {
+    color: #183e32;
+    text-align: left;
+    margin: 0 0 24px;
+    font-family: Cambria, Cochin, Georgia, Times,
+                 "Times New Roman", serif;
+    font-size: 25px;
+}
+
+#inscription form p {
+    margin: 0 0 18px;
+}
+
+/* Étiquettes au-dessus des champs. */
+#inscription form label {
+    display: block;
+    width: auto;
+    margin: 0 0 6px;
+    text-align: left;
+    font-size: 14px;
+}
+
+/* Champs de même largeur. */
+#inscription form input:not([type="checkbox"]):not([type="submit"]) {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    margin-top: 6px;
+    padding: 12px;
+
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    background-color: #fafafa;
+    font: inherit;
+}
+
+#inscription form input:focus {
+    outline: 2px solid #2563eb;
+    outline-offset: 2px;
+}
+#inscription select {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    margin-top: 6px;
+    padding: 12px;
+
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    background-color: #fafafa;
+    font: inherit;
+    cursor: pointer;
+}
+
+#inscription select:focus {
+    outline: 2px solid #2563eb;
+    outline-offset: 2px;
+}
+
+/* Règles dépliables sous le formulaire, à droite. */
+#ruler {
+    grid-column: 2;
+    grid-row: 3;
+
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+
+    text-align: left;
+    background-color: white;
+    border: 1px solid #dddddd;
+    border-radius: 18px;
+}
+
+#ruler summary {
+    padding: 18px 24px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #183e32;
+    border-radius: 18px;
+}
+
+#ruler summary:hover {
+    background-color: #f1f5eb;
+}
+
+#ruler summary:focus-visible {
+    outline: 2px solid #183e32;
+    outline-offset: 3px;
+}
+
+#ruler[open] summary {
+    border-bottom: 1px solid #dddddd;
+    border-radius: 18px 18px 0 0;
+}
+
+#ruler .contenu-regles {
+    padding: 8px 24px 20px;
+    line-height: 1.6;
+}
+
+#ruler ul {
+    padding-left: 20px;
+}
+
+#ruler li {
+    margin-bottom: 12px;
+}
+
+/* Acceptation et bouton sous les règles, à droite. */
+.validation-inscription {
+    grid-column: 2;
+    grid-row: 4;
+
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+}
+
+.validation-inscription p {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 0 0 18px;
+}
+
+.validation-inscription label {
+    cursor: pointer;
+    line-height: 1.5;
+}
+
+#acceptation-regles {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    margin: 3px 0 0;
+    accent-color: #183e32;
+}
+
+.validation-inscription button {
+    padding: 12px 24px;
+    background-color: #183e32;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font: inherit;
+    cursor: pointer;
+}
+
+.validation-inscription button:hover {
+    background-color: #285841;
+}
+
+.validation-inscription button:focus-visible {
+    outline: 2px solid #183e32;
+    outline-offset: 3px;
+}
+
+/* Sur petit écran : une seule colonne. */
+@media (max-width: 850px) {
+    main {
+        grid-template-columns: minmax(0, 1fr);
+        padding: 16px;
+    }
+
+    #messages {
+        grid-column: 1;
+        grid-row: 2;
+        max-width: 100%;
+    }
+
+    #inscription {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    #ruler {
+        grid-column: 1;
+        grid-row: 4;
+    }
+
+    .validation-inscription {
+        grid-column: 1;
+        grid-row: 5;
+    }
+
+    body header h1 {
+        font-size: 36px;
+        overflow-wrap: anywhere;
+    }
+}

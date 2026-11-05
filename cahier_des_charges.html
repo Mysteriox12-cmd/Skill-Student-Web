@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cahier des charges de Skill Student : intention, objectifs pédagogiques, ressources et échéancier d’un jeu éducatif pour la 7e année.">
+    <title>Skill Student — Cahier des charges</title>
+    <link rel="stylesheet" href="art.css">
+</head>
+
+<body>
+    <main class="cahier">
+        <h1>Skill Student — Cahier des charges</h1>
+        <p>Bienvenue dans la présentation du projet éducatif <strong>Skill Student</strong>.</p>
+
+
+        <img
+            id="image"
+            src="image/images (1).jpeg"
+            alt="Illustration de l’ESMB"
+            width="500"
+            height="250"
+        >
+
+        <p><strong>Public cible :</strong> élèves de 7e année.</p>
+
+        <p><strong>Encadrement :</strong> l’enseignante ou l’enseignant choisit le parcours et accompagne les élèves.</p>
+
+        <p class="note-projet">Ce document présente les objectifs, le fonctionnement, les ressources et les étapes de production du jeu. Les contenus et les échéances proposés seront validés avec l’enseignante ou l’enseignant.</p>
+
+
+        <hr>
+
+        <section id="intention" aria-labelledby="titre-intention">
+<h2 id="titre-intention">1. Intention du jeu éducatif</h2>
+<p>Nous souhaitons créer Skill Student, un jeu de révision qui aidera les élèves de 7e année à mieux connaître la géographie et certains monuments du Canada. Chaque parcours présentera un court rappel de cours suivi de dix questions interactives. Une barre de score et un bilan avec des corrections expliquées permettront aux élèves de repérer leurs erreurs et de revoir les notions moins bien comprises. Le jeu servira également de support de révision pour l’enseignante ou l’enseignant.</p>
+
+</section>
+
+        <section aria-labelledby="titre-objectifs">
+<h2 id="titre-objectifs">2. Objectifs pédagogiques précis</h2>
+<details id="pedagogie" open><summary>Consulter les objectifs et les critères de réussite</summary><div class="contenu-regles"><p>Après les activités, l’élève devra être capable de :</p>
+<p>Situer des provinces et des territoires du Canada sur une carte : réussir au moins quatre questions sur cinq.</p>
+<p>Associer des villes canadiennes à leur province ou à leur territoire : réussir au moins quatre associations sur cinq.</p>
+<p>Reconnaître des statues et des monuments du Canada et les associer à leur ville : réussir au moins huit questions sur dix.</p>
+<p>Ces seuils sont des critères de réussite proposés, à valider avec l’enseignante ou l’enseignant.</p>
+<div class="tableau-defilant" tabindex="0" role="region" aria-label="Répartition des questions par parcours"><table><caption>Répartition des questions par parcours</caption><thead><tr><th scope="col">Parcours</th><th scope="col">Répartition des questions</th></tr>
+</thead><tbody><tr><th scope="row">Provinces, territoires et villes</th><td>5 questions de repérage sur une carte et 5 associations entre villes et provinces ou territoires.</td></tr>
+<tr><th scope="row">Statues et monuments</th><td>5 questions de reconnaissance à partir d’images et 5 associations entre monuments et villes.</td></tr>
+</tbody></table></div><p>Chaque bonne réponse vaudra un point. Le bilan affichera le score sur dix, le pourcentage de réussite et les notions à revoir. Un nouvel essai permettra de comparer les résultats pendant la même session.</p>
+</div></details>
+</section>
+
+        <section id="fonctionnement" aria-labelledby="titre-fonctionnement">
+<h2 id="titre-fonctionnement">3. Fonctionnement prévu du programme</h2>
+<p>L’enseignante ou l’enseignant donnera accès au parcours choisi. L’élève lira la fiche de cours et un exemple corrigé, puis répondra aux questions. Après chaque validation, une condition comparera la réponse choisie à la réponse attendue, mettra à jour la variable de score et déclenchera une courte animation accompagnée d’un message. À la fin, le programme affichera les réponses et leurs corrections.</p>
+<p>Une liste conservera en mémoire les réponses de chaque essai. Chaque question contiendra un identifiant, un énoncé, des choix, une réponse attendue et une explication. Aucune sauvegarde permanente des résultats ne sera prévue dans cette première version.</p>
+<p>Les comptes du site seront réservés aux enseignants autorisés. La vérification du domaine du courriel sera complétée par une validation du compte. Les élèves joueront sans compte personnel, sous la supervision de leur enseignante ou de leur enseignant.</p>
+
+</section>
+
+        <section id="Element" aria-labelledby="titre-ressources">
+<h2 id="titre-ressources">4. Ressources nécessaires</h2>
+<div class="tableau-defilant" tabindex="0" role="region" aria-label="Ressources et rôle dans le projet"><table><caption>Ressources et rôle dans le projet</caption><thead><tr><th scope="col">Ressource</th><th scope="col">Utilisation</th></tr>
+</thead><tbody><tr><th scope="row">Contenus pédagogiques</th><td>Deux fiches de cours, vingt questions et leurs corrigés, vérifiés par l’enseignante ou l’enseignant.</td></tr>
+<tr><th scope="row">Matériel et logiciels</th><td>Ordinateur ou Chromebook, navigateur Web, connexion Internet, VS Code et environnement de jeu compatible avec Lua.</td></tr>
+<tr><th scope="row">HTML et CSS</th><td>Structurer les pages du site et adapter leur présentation aux différentes tailles d’écran.</td></tr>
+<tr><th scope="row">JavaScript</th><td>Gérer les interactions du site et transmettre les données des formulaires au serveur avec <code>fetch()</code>.</td></tr>
+<tr><th scope="row">Lua</th><td>Programmer les parcours, les questions, la validation des réponses, le score et les animations du jeu.</td></tr>
+<tr><th scope="row">Images et personnes-ressources</th><td>Cartes, images et sons autorisés, avec leurs sources; enseignant pour la validation et élèves volontaires pour les essais.</td></tr>
+<tr><th scope="row">Outils de correction</th><td>Correcteur orthographique du traitement de texte et dictionnaire pour vérifier la langue.</td></tr>
+</tbody></table></div>
+</section>
+
+        <section id="echeancier" aria-labelledby="titre-echeancier">
+<h2 id="titre-echeancier">5. Échéancier prévisionnel</h2>
+<p>Période proposée : du 19 octobre au 6 novembre 2026. Les dates pourront être ajustées selon l’avancement du projet et la date de remise fixée par l’enseignante ou l’enseignant.</p>
+<div class="tableau-defilant" tabindex="0" role="region" aria-label="Plan de production du jeu éducatif"><table><caption>Plan de production du jeu éducatif</caption><thead><tr><th scope="col">Étape</th><th scope="col">Dates en 2026</th><th scope="col">Résultat attendu</th></tr>
+</thead><tbody><tr><th scope="row">Définir les besoins</th><td>19–20 octobre</td><td>Confirmer le public et les notions; consulter l’enseignant ou réaliser un court sondage.</td></tr>
+<tr><th scope="row">Finaliser le cahier des charges</th><td>21 octobre</td><td>Valider les objectifs, les fonctionnalités et le calendrier.</td></tr>
+<tr><th scope="row">Préparer les contenus</th><td>22–23 octobre</td><td>Rédiger deux fiches et vingt questions avec des corrigés vérifiés.</td></tr>
+<tr><th scope="row">Concevoir l’interface</th><td>26 octobre</td><td>Créer les maquettes des écrans du jeu.</td></tr>
+<tr><th scope="row">Programmer le prototype</th><td>27–30 octobre</td><td>Rendre le premier parcours jouable avec score, animations et bilan.</td></tr>
+<tr><th scope="row">Intégrer et tester</th><td>2–3 novembre</td><td>Ajouter le second parcours, intégrer le jeu au site et vérifier son fonctionnement.</td></tr>
+<tr><th scope="row">Recueillir des retours</th><td>4 novembre</td><td>Faire essayer le jeu et noter les difficultés rencontrées.</td></tr>
+<tr><th scope="row">Corriger et relire</th><td>5 novembre</td><td>Corriger les bogues, les consignes et les explications.</td></tr>
+<tr><th scope="row">Remettre le projet</th><td>6 novembre</td><td>Présenter le jeu, le code source et le cahier des charges actualisé.</td></tr>
+</tbody></table></div>
+</section>
+
+        <section id="qualite" aria-labelledby="titre-qualite">
+<h2 id="titre-qualite">6. Qualité de la langue et vérification finale</h2>
+<p>Nous utiliserons des phrases courtes, des consignes précises et un vocabulaire adapté à la 7e année. Les textes seront vérifiés avec un correcteur orthographique, puis relus pour contrôler les accords, les accents et la clarté des explications.</p>
+<p>Nous testerons les réponses correctes et incorrectes, l’absence de sélection et le double clic. Le score restera entre zéro et dix, sans double attribution de points. Nous vérifierons la navigation au clavier, la lisibilité sur petit écran et les messages accompagnant les animations.</p>
+<p>Le projet sera prêt à remettre lorsque les deux parcours seront jouables jusqu’au bilan, que les corrigés auront été vérifiés et qu’aucun bogue bloquant connu ne subsistera.</p>
+
+</section>
+    </main>
+</body>
+</html>

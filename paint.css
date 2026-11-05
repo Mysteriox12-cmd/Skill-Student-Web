@@ -1,0 +1,210 @@
+/* 1. Couleurs du thème clair */
+:root {
+    color-scheme: light;
+    --fond: #f4f7fb;
+    --carte: #ffffff;
+    --texte: #183e32;
+    --bordure: #d5dfe5;
+    --lien: #1755b5;
+}
+
+/* 2. Couleurs du thème sombre */
+html.sombre {
+    color-scheme: dark;
+    --fond: #121820;
+    --carte: #1e2936;
+    --texte: #edf2f7;
+    --bordure: #526173;
+    --lien: #93c5fd;
+}
+
+/* Inclut les bordures et les espacements dans la largeur */
+* {
+    box-sizing: border-box;
+}
+
+/* 3. Apparence générale */
+body {
+    margin: 0;
+    padding: 40px 20px;
+    background-color: var(--fond);
+    color: var(--texte);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+h1 {
+    margin: 0 0 30px;
+    text-align: center;
+    font-size: 32px;
+}
+
+/* Centre le contenu */
+main {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+a {
+    color: var(--lien);
+}
+
+/* 4. Carte des informations utilisateur */
+#Store-user-info {
+    padding: 28px;
+    background-color: var(--carte);
+    border: 1px solid var(--bordure);
+    border-left: 5px solid var(--lien);
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 8%);
+    overflow-wrap: anywhere;
+}
+
+#Store-user-info h2 {
+    margin: 0 0 12px;
+    font-size: 24px;
+}
+
+#Store-user-info p {
+    margin: 0;
+}
+
+#nom-utilisateur,
+#ecole-utilisateur {
+    font-weight: bold;
+}
+
+/* 5. Liens vers le cahier des charges et le jeu */
+#Link,
+#Gm {
+    margin: 24px 0;
+}
+
+/* Apparence identique pour les deux liens */
+#Link a,
+#Gm a {
+    display: inline-block;
+    padding: 14px 22px;
+
+    background-color: var(--carte);
+    color: var(--texte);
+
+    border: 1px solid var(--bordure);
+    border-radius: 10px;
+
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+
+    transition: background-color 0.2s, color 0.2s;
+}
+
+/* Au passage de la souris */
+#Link a:hover,
+#Gm a:hover {
+    background-color: var(--texte);
+    color: var(--carte);
+}
+
+/* 6. Bouton de choix du thème */
+.choix-theme {
+    position: relative;
+    display: inline-block;
+}
+
+#bouton-theme,
+#options-theme button {
+    padding: 10px 16px;
+    background-color: var(--carte);
+    color: var(--texte);
+    border: 1px solid var(--bordure);
+    border-radius: 8px;
+    font: inherit;
+    cursor: pointer;
+}
+
+#bouton-theme:hover {
+    border-color: var(--lien);
+}
+
+/* 7. Menu Lumière / Obscurité */
+#options-theme {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    z-index: 100;
+
+    width: 170px;
+    padding: 8px;
+
+    background-color: var(--carte);
+    border: 1px solid var(--bordure);
+    border-radius: 10px;
+    box-shadow: 0 6px 16px rgb(0 0 0 / 15%);
+}
+
+#options-theme[hidden] {
+    display: none;
+}
+
+#options-theme button {
+    display: block;
+    width: 100%;
+    border: none;
+    text-align: left;
+}
+
+#options-theme button:hover {
+    background-color: var(--fond);
+}
+
+/* Rend la sélection au clavier visible */
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--lien);
+    outline-offset: 4px;
+}
+
+/* 8. Ajustements pour les petits écrans */
+@media (max-width: 600px) {
+    body {
+        padding: 24px 16px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    #Store-user-info {
+        padding: 20px;
+    }
+
+    #Link a,
+    #Gm a {
+        display: block;
+        text-align: center;
+    }
+}
+/* Aligne les trois éléments horizontalement */
+.barre-boutons {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin: 24px 0;
+}
+
+/* Annule les anciennes dimensions des zones de liens */
+.barre-boutons #Link,
+.barre-boutons #Gm {
+    margin: 0;
+    width: auto;
+    max-width: none;
+}
+
+/* Harmonise la taille du bouton Thème avec les liens */
+.barre-boutons #bouton-theme {
+    padding: 14px 22px;
+    font-weight: bold;
+    border-radius: 10px;
+}
